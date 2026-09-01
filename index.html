@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GΔBSYNC | Official Site & Bookings</title>
 
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -60,9 +61,11 @@
 
 <body class="text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-iriPink selection:text-white">
 
+    <!-- Header / Navigation -->
     <header class="sticky top-0 z-50 backdrop-blur-xl bg-iriDark/70 border-b border-iriLavender/20">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
+            <!-- GΔBSYNC Logo Header -->
             <a href="#" class="text-2xl font-light tracking-[0.2em] text-iriLavender flex items-center gap-1">
                 <span>G</span>
                 <svg class="h-[0.72em] w-auto fill-none stroke-iriPink stroke-[2.5] inline-block align-baseline" viewBox="0 0 24 24">
@@ -86,6 +89,7 @@
 
     <main class="max-w-6xl mx-auto px-6 space-y-32 py-16">
 
+        <!-- Hero Section -->
         <section class="text-center py-16 space-y-8 relative">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-iriLavender/10 rounded-full blur-[140px] pointer-events-none"></div>
 
@@ -93,6 +97,7 @@
                 House • Minimal Techno • Live Mixes
             </div>
 
+            <!-- Stylized Title -->
             <h1 class="text-6xl md:text-9xl font-light tracking-[0.15em] uppercase leading-none text-iridescent py-2 flex items-center justify-center gap-2">
                 <span>G</span>
                 <svg class="h-[0.72em] w-auto fill-none stroke-iriPink stroke-[2.5] inline-block" viewBox="0 0 24 24">
@@ -116,6 +121,7 @@
             </div>
         </section>
 
+        <!-- Live Sets & Visuals Section -->
         <section id="video" class="space-y-6">
             <div class="flex items-center justify-between gap-4">
                 <div class="flex items-center gap-4 flex-1">
@@ -131,11 +137,13 @@
                 </a>
             </div>
 
+            <!-- YouTube Embedded Video Player with Randomizer ID -->
             <div class="aspect-video w-full rounded-3xl overflow-hidden glass-card shadow-2xl">
                 <iframe
+                    id="featured-video"
                     class="w-full h-full"
-                    src="https://www.youtube.com/embed/videoseries?list=UU-E09HH3FF1wkET1VjgPv9A"
-                    title="GΔBSYNC YouTube Channel Uploads"
+                    src="https://www.youtube.com/embed/rH055k3fago"
+                    title="GΔBSYNC Live Visuals & Mixes"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen>
@@ -143,8 +151,10 @@
             </div>
         </section>
 
+        <!-- About / EPK Section -->
         <section id="about" class="grid md:grid-cols-2 gap-10 items-center">
 
+            <!-- Adjusted Portrait Container -->
             <div class="aspect-[4/5] w-full max-w-md mx-auto bg-slate-950/60 rounded-3xl glass-card overflow-hidden shadow-2xl">
                 <img
                     src="48C9B7ED-6665-44B4-B417-4BB744519C28.png"
@@ -157,6 +167,7 @@
                     Press Kit &amp; Bio
                 </div>
 
+                <!-- Resized Triangle for About Heading -->
                 <h2 class="text-3xl font-light text-white tracking-[0.18em] uppercase flex items-center gap-1.5">
                     <span>About G</span>
                     <svg class="h-[0.88em] w-auto fill-none stroke-iriPink stroke-[2.5] inline-block -mt-1" viewBox="0 0 24 24">
@@ -180,6 +191,7 @@
             </div>
         </section>
 
+        <!-- Booking & Inquiries Section -->
         <section id="booking" class="space-y-8">
             <div class="text-center space-y-3">
                 <h2 class="text-3xl font-light text-white tracking-widest uppercase">Booking Inquiries</h2>
@@ -232,6 +244,7 @@
 
     </main>
 
+    <!-- Footer -->
     <footer class="border-t border-slate-900 bg-iriDark/90 py-10 text-center text-xs text-slate-500 font-mono">
         <div class="max-w-6xl mx-auto px-6 space-y-4">
             <div class="flex justify-center gap-8 text-slate-400 font-light tracking-widest uppercase">
@@ -244,6 +257,24 @@
             <p>&copy; 2026 GΔBSYNC. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Video Randomizer Script -->
+    <script>
+        // Array of your public YouTube Video IDs
+        const gabsyncVideos = [
+            "rH055k3fago", // Afro House, Ethnic House & Minimal Techno Mix
+            "U2G46l_8LQM", // Morning Music Mix | Chill Music Mix for Mornings
+            "-Y0K_vrLLRE", // Techno Playlist | Minimal Techno Playlist | Party Music
+            "A1RMX7OLHUE", // New Music Playlist | Minimal Techno Playlist
+            "uW0kUCDGXb0"  // House/Techno Mix with Cartoon Visuals
+        ];
+
+        // Select a random video ID from the list
+        const selectedVideo = gabsyncVideos[Math.floor(Math.random() * gabsyncVideos.length)];
+
+        // Update the iframe URL dynamically on page load
+        document.getElementById('featured-video').src = `https://www.youtube.com/embed/${selectedVideo}`;
+    </script>
 
 </body>
 </html>
