@@ -1,269 +1,249 @@
 <!DOCTYPE html>
-
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GΔBSYNC | Official Site & Bookings</title>
 
-```
-<!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    iriLavender: '#a5b4fc',
-                    iriPink: '#f472b6',
-                    iriCyan: '#38bdf8',
-                    iriDark: '#0b0f19',
-                },
-                boxShadow: {
-                    'iri-glow': '0 0 25px rgba(165, 180, 252, 0.35)',
-                    'pink-glow': '0 0 25px rgba(244, 114, 182, 0.35)',
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        iriLavender: '#a5b4fc',
+                        iriPink: '#f472b6',
+                        iriCyan: '#38bdf8',
+                        iriDark: '#0b0f19',
+                    },
+                    boxShadow: {
+                        'iri-glow': '0 0 25px rgba(165, 180, 252, 0.35)',
+                        'pink-glow': '0 0 25px rgba(244, 114, 182, 0.35)',
+                    }
                 }
             }
         }
-    }
-</script>
+    </script>
 
-<style>
-    /* Iridescent Wavy Mesh Background */
-    body {
-        background-color: #080c14;
-        background-image:
-            radial-gradient(ellipse at 20% 20%, rgba(165, 180, 252, 0.18) 0%, transparent 50%),
-            radial-gradient(ellipse at 80% 30%, rgba(244, 114, 182, 0.15) 0%, transparent 50%),
-            radial-gradient(ellipse at 50% 80%, rgba(56, 189, 248, 0.12) 0%, transparent 60%);
-        background-attachment: fixed;
-    }
+    <style>
+        /* Iridescent Wavy Mesh Background */
+        body {
+            background-color: #080c14;
+            background-image:
+                radial-gradient(ellipse at 20% 20%, rgba(165, 180, 252, 0.18) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 30%, rgba(244, 114, 182, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(56, 189, 248, 0.12) 0%, transparent 60%);
+            background-attachment: fixed;
+        }
 
-    /* Iridescent Gradient Text */
-    .text-iridescent {
-        background: linear-gradient(135deg, #a5b4fc 0%, #f472b6 50%, #38bdf8 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+        /* Iridescent Gradient Text */
+        .text-iridescent {
+            background: linear-gradient(135deg, #a5b4fc 0%, #f472b6 50%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-    /* Glassmorphism Card Styling */
-    .glass-card {
-        background: rgba(15, 23, 42, 0.65);
-        backdrop-filter: blur(16px);
-        border: 1px solid rgba(165, 180, 252, 0.2);
-    }
+        /* Glassmorphism Card Styling */
+        .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(165, 180, 252, 0.2);
+        }
 
-    .glass-card:hover {
-        border-color: rgba(244, 114, 182, 0.4);
-        box-shadow: 0 0 30px rgba(165, 180, 252, 0.15);
-    }
-</style>
-```
-
+        .glass-card:hover {
+            border-color: rgba(244, 114, 182, 0.4);
+            box-shadow: 0 0 30px rgba(165, 180, 252, 0.15);
+        }
+    </style>
 </head>
 
 <body class="text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-iriPink selection:text-white">
 
-```
-<!-- Header / Navigation -->
-<header class="sticky top-0 z-50 backdrop-blur-xl bg-iriDark/70 border-b border-iriLavender/20">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-iriDark/70 border-b border-iriLavender/20">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        <!-- GΔBSYNC Logo Header -->
-        <a href="#" class="text-2xl font-light tracking-[0.2em] text-iriLavender flex items-center gap-1">
-            <span>G</span>
-            <svg class="h-[0.72em] w-auto fill-none stroke-iriPink stroke-[2.5] inline-block align-baseline" viewBox="0 0 24 24">
-                <polygon points="12,3 2,21 22,21" />
-            </svg>
-            <span>BSYNC</span>
-        </a>
-
-        <nav class="hidden md:flex space-x-8 text-sm font-light tracking-widest uppercase">
-            <a href="#music" class="hover:text-iriCyan transition">Music</a>
-            <a href="#video" class="hover:text-iriCyan transition">Visuals</a>
-            <a href="#about" class="hover:text-iriPink transition">About</a>
-            <a href="#booking" class="hover:text-iriPink transition">Booking</a>
-        </nav>
-
-        <a href="#booking" class="bg-gradient-to-r from-iriLavender via-iriPink to-iriCyan hover:opacity-90 text-slate-950 font-semibold px-5 py-2 rounded-full text-xs tracking-widest uppercase transition duration-300 shadow-iri-glow">
-            Book GΔBSYNC
-        </a>
-    </div>
-</header>
-
-<main class="max-w-6xl mx-auto px-6 space-y-32 py-16">
-
-    <!-- Hero Section -->
-    <section class="text-center py-16 space-y-8 relative">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-iriLavender/10 rounded-full blur-[140px] pointer-events-none"></div>
-
-        <div class="inline-block px-4 py-1.5 rounded-full border border-iriLavender/30 bg-iriLavender/10 text-iriLavender text-xs tracking-[0.2em] uppercase font-light backdrop-blur-md">
-            House • Minimal Techno • Live Mixes
-        </div>
-
-        <!-- Stylized Title -->
-        <h1 class="text-6xl md:text-9xl font-light tracking-[0.15em] uppercase leading-none text-iridescent py-2 flex items-center justify-center gap-2">
-            <span>G</span>
-            <svg class="h-[0.72em] w-auto fill-none stroke-iriPink stroke-[2.5] inline-block" viewBox="0 0 24 24">
-                <polygon points="12,3 2,21 22,21" />
-            </svg>
-            <span>BSYNC</span>
-        </h1>
-
-        <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-extralight tracking-wide leading-relaxed">
-            Immersive audio frequencies &amp; high-energy house &amp; minimal techno sets.
-        </p>
-
-        <div class="flex justify-center gap-5 pt-4">
-            <a href="#video" class="glass-card text-iriLavender px-8 py-3.5 rounded-full font-light tracking-widest text-xs uppercase transition duration-300 hover:text-white">
-                Watch Live Sets
-            </a>
-
-            <a href="#booking" class="bg-gradient-to-r from-iriPink to-iriLavender text-slate-950 font-semibold px-8 py-3.5 rounded-full tracking-widest text-xs uppercase transition duration-300 shadow-pink-glow hover:opacity-90">
-                Request Booking
-            </a>
-        </div>
-    </section>
-
-    <!-- Live Sets & Visuals Section -->
-    <section id="video" class="space-y-6">
-        <div class="flex items-center justify-between gap-4">
-            <div class="flex items-center gap-4 flex-1">
-                <h2 class="text-2xl font-light tracking-[0.2em] uppercase text-slate-200">Live Visuals &amp; Mixes</h2>
-                <div class="h-px bg-gradient-to-r from-iriPink/40 to-transparent flex-1"></div>
-            </div>
-
-            <a href="https://youtube.com/@djgabsync" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-iriPink hover:text-iriLavender transition uppercase tracking-widest flex items-center gap-2">
-                <span>Visit YouTube Channel</span>
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-            </a>
-        </div>
-
-        <!-- YouTube Embedded Video Player -->
-        <div class="aspect-video w-full rounded-3xl overflow-hidden glass-card shadow-2xl">
-            <iframe
-                class="w-full h-full"
-                src="https://www.youtube.com/embed?listType=playlist&list=UU-E09HH3FF1wkET1VjgPv9A"
-                title="GΔBSYNC YouTube Channel Uploads"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>
-
-    <!-- About / EPK Section -->
-    <section id="about" class="grid md:grid-cols-2 gap-10 items-center">
-
-        <!-- Adjusted Portrait Container to fit full head/bun perfectly -->
-        <div class="aspect-[4/5] w-full max-w-md mx-auto bg-slate-950/60 rounded-3xl glass-card overflow-hidden shadow-2xl">
-            <img
-                src="48C9B7ED-6665-44B4-B417-4BB744519C28.png"
-                alt="GΔBSYNC Press Image"
-                class="w-full h-full object-cover object-top rounded-3xl hover:scale-105 transition duration-500">
-        </div>
-
-        <div class="space-y-6">
-            <div class="inline-block px-3 py-1 rounded-full bg-iriPink/10 text-iriPink border border-iriPink/30 font-mono text-xs tracking-widest uppercase">
-                Press Kit &amp; Bio
-            </div>
-
-            <!-- Resized Triangle for About Heading -->
-            <h2 class="text-3xl font-light text-white tracking-[0.18em] uppercase flex items-center gap-1.5">
-                <span>About G</span>
-                <svg class="h-[0.88em] w-auto fill-none stroke-iriPink stroke-[2.5] inline-block -mt-1" viewBox="0 0 24 24">
+            <a href="#" class="text-2xl font-light tracking-[0.2em] text-iriLavender flex items-center gap-1">
+                <span>G</span>
+                <svg class="h-[0.72em] w-auto fill-none stroke-iriPink stroke-[2.5] inline-block align-baseline" viewBox="0 0 24 24">
                     <polygon points="12,3 2,21 22,21" />
                 </svg>
                 <span>BSYNC</span>
-            </h2>
+            </a>
 
-            <p class="text-slate-300 leading-relaxed font-extralight">
-                Delivering house, minimal techno, and bouncy electronic soundscapes designed for main stages, outdoor visual sessions, and late-night sets.
+            <nav class="hidden md:flex space-x-8 text-sm font-light tracking-widest uppercase">
+                <a href="#music" class="hover:text-iriCyan transition">Music</a>
+                <a href="#video" class="hover:text-iriCyan transition">Visuals</a>
+                <a href="#about" class="hover:text-iriPink transition">About</a>
+                <a href="#booking" class="hover:text-iriPink transition">Booking</a>
+            </nav>
+
+            <a href="#booking" class="bg-gradient-to-r from-iriLavender via-iriPink to-iriCyan hover:opacity-90 text-slate-950 font-semibold px-5 py-2 rounded-full text-xs tracking-widest uppercase transition duration-300 shadow-iri-glow">
+                Book GΔBSYNC
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 space-y-32 py-16">
+
+        <section class="text-center py-16 space-y-8 relative">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-iriLavender/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+            <div class="inline-block px-4 py-1.5 rounded-full border border-iriLavender/30 bg-iriLavender/10 text-iriLavender text-xs tracking-[0.2em] uppercase font-light backdrop-blur-md">
+                House • Minimal Techno • Live Mixes
+            </div>
+
+            <h1 class="text-6xl md:text-9xl font-light tracking-[0.15em] uppercase leading-none text-iridescent py-2 flex items-center justify-center gap-2">
+                <span>G</span>
+                <svg class="h-[0.72em] w-auto fill-none stroke-iriPink stroke-[2.5] inline-block" viewBox="0 0 24 24">
+                    <polygon points="12,3 2,21 22,21" />
+                </svg>
+                <span>BSYNC</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-extralight tracking-wide leading-relaxed">
+                Immersive audio frequencies &amp; high-energy house &amp; minimal techno sets.
             </p>
 
-            <div class="pt-2">
-                <a href="#" class="inline-flex items-center gap-3 text-iriLavender hover:text-iriPink font-mono text-xs tracking-widest uppercase transition">
-                    <span>Download Full Press Kit (PDF/Assets)</span>
-                    <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            <div class="flex justify-center gap-5 pt-4">
+                <a href="#video" class="glass-card text-iriLavender px-8 py-3.5 rounded-full font-light tracking-widest text-xs uppercase transition duration-300 hover:text-white">
+                    Watch Live Sets
+                </a>
+
+                <a href="#booking" class="bg-gradient-to-r from-iriPink to-iriLavender text-slate-950 font-semibold px-8 py-3.5 rounded-full tracking-widest text-xs uppercase transition duration-300 shadow-pink-glow hover:opacity-90">
+                    Request Booking
+                </a>
+            </div>
+        </section>
+
+        <section id="video" class="space-y-6">
+            <div class="flex items-center justify-between gap-4">
+                <div class="flex items-center gap-4 flex-1">
+                    <h2 class="text-2xl font-light tracking-[0.2em] uppercase text-slate-200">Live Visuals &amp; Mixes</h2>
+                    <div class="h-px bg-gradient-to-r from-iriPink/40 to-transparent flex-1"></div>
+                </div>
+
+                <a href="https://youtube.com/@djgabsync" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-iriPink hover:text-iriLavender transition uppercase tracking-widest flex items-center gap-2">
+                    <span>Visit YouTube Channel</span>
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
                 </a>
             </div>
-        </div>
-    </section>
 
-    <!-- Booking & Inquiries Section -->
-    <section id="booking" class="space-y-8">
-        <div class="text-center space-y-3">
-            <h2 class="text-3xl font-light text-white tracking-widest uppercase">Booking Inquiries</h2>
-            <p class="text-slate-400 text-xs font-light tracking-wide max-w-lg mx-auto">
-                Submit event specifications below for schedule availability and performance requests.
-            </p>
-        </div>
+            <div class="aspect-video w-full rounded-3xl overflow-hidden glass-card shadow-2xl">
+                <iframe
+                    class="w-full h-full"
+                    src="https://www.youtube.com/embed/videoseries?list=UU-E09HH3FF1wkET1VjgPv9A"
+                    title="GΔBSYNC YouTube Channel Uploads"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
 
-        <form action="https://formsubmit.co/inyourcity.studio@gmail.com" method="POST" class="glass-card rounded-3xl p-8 space-y-6 max-w-4xl mx-auto">
+        <section id="about" class="grid md:grid-cols-2 gap-10 items-center">
 
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <label class="block text-xs font-mono uppercase tracking-widest text-iriLavender mb-2">Promoter / Organization</label>
-                    <input type="text" name="organization" placeholder="Contact or Agency Name" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-iriLavender transition font-light text-sm">
-                </div>
-
-                <div>
-                    <label class="block text-xs font-mono uppercase tracking-widest text-iriLavender mb-2">Email Address</label>
-                    <input type="email" name="email" placeholder="promoter@venue.com" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-iriLavender transition font-light text-sm">
-                </div>
+            <div class="aspect-[4/5] w-full max-w-md mx-auto bg-slate-950/60 rounded-3xl glass-card overflow-hidden shadow-2xl">
+                <img
+                    src="48C9B7ED-6665-44B4-B417-4BB744519C28.png"
+                    alt="GΔBSYNC Press Image"
+                    class="w-full h-full object-cover object-top rounded-3xl hover:scale-105 transition duration-500">
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div>
-                    <label class="block text-xs font-mono uppercase tracking-widest text-iriPink mb-2">Event Date</label>
-                    <input type="date" name="event_date" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-iriPink transition font-light text-sm">
+            <div class="space-y-6">
+                <div class="inline-block px-3 py-1 rounded-full bg-iriPink/10 text-iriPink border border-iriPink/30 font-mono text-xs tracking-widest uppercase">
+                    Press Kit &amp; Bio
                 </div>
 
-                <div>
-                    <label class="block text-xs font-mono uppercase tracking-widest text-iriPink mb-2">Location / Venue</label>
-                    <input type="text" name="location" placeholder="City, Venue Name" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-iriPink transition font-light text-sm">
-                </div>
+                <h2 class="text-3xl font-light text-white tracking-[0.18em] uppercase flex items-center gap-1.5">
+                    <span>About G</span>
+                    <svg class="h-[0.88em] w-auto fill-none stroke-iriPink stroke-[2.5] inline-block -mt-1" viewBox="0 0 24 24">
+                        <polygon points="12,3 2,21 22,21" />
+                    </svg>
+                    <span>BSYNC</span>
+                </h2>
 
-                <div>
-                    <label class="block text-xs font-mono uppercase tracking-widest text-iriPink mb-2">Set Duration</label>
-                    <input type="text" name="set_duration" placeholder="e.g. 2 Hours Peak Time" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-iriPink transition font-light text-sm">
+                <p class="text-slate-300 leading-relaxed font-extralight">
+                    Delivering house, minimal techno, and bouncy electronic soundscapes designed for main stages, outdoor visual sessions, and late-night sets.
+                </p>
+
+                <div class="pt-2">
+                    <a href="#" class="inline-flex items-center gap-3 text-iriLavender hover:text-iriPink font-mono text-xs tracking-widest uppercase transition">
+                        <span>Download Full Press Kit (PDF/Assets)</span>
+                        <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
+        </section>
 
-            <div>
-                <label class="block text-xs font-mono uppercase tracking-widest text-iriLavender mb-2">Event Specs &amp; Details</label>
-                <textarea name="event_details" rows="4" placeholder="Stage setup, line-up context, sound details..." class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-iriLavender transition font-light text-sm"></textarea>
+        <section id="booking" class="space-y-8">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-light text-white tracking-widest uppercase">Booking Inquiries</h2>
+                <p class="text-slate-400 text-xs font-light tracking-wide max-w-lg mx-auto">
+                    Submit event specifications below for schedule availability and performance requests.
+                </p>
             </div>
 
-            <button type="submit" class="w-full bg-gradient-to-r from-iriLavender via-iriPink to-iriCyan text-slate-950 font-semibold uppercase tracking-[0.2em] py-4 rounded-xl transition hover:opacity-95 shadow-iri-glow text-xs">
-                Send Booking Inquiry
-            </button>
-        </form>
-    </section>
+            <form action="https://formsubmit.co/inyourcity.studio@gmail.com" method="POST" class="glass-card rounded-3xl p-8 space-y-6 max-w-4xl mx-auto">
 
-</main>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-widest text-iriLavender mb-2">Promoter / Organization</label>
+                        <input type="text" name="organization" placeholder="Contact or Agency Name" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-iriLavender transition font-light text-sm">
+                    </div>
 
-<!-- Footer -->
-<footer class="border-t border-slate-900 bg-iriDark/90 py-10 text-center text-xs text-slate-500 font-mono">
-    <div class="max-w-6xl mx-auto px-6 space-y-4">
-        <div class="flex justify-center gap-8 text-slate-400 font-light tracking-widest uppercase">
-            <a href="https://youtube.com/@djgabsync" target="_blank" rel="noopener noreferrer" class="hover:text-iriLavender transition">YouTube</a>
-            <a href="#" class="hover:text-iriLavender transition">SoundCloud</a>
-            <a href="https://www.instagram.com/apocalyptic_chick/" target="_blank" rel="noopener noreferrer" class="hover:text-iriPink transition">Instagram</a>
-            <a href="https://www.twitch.tv/djgabsync" target="_blank" rel="noopener noreferrer" class="hover:text-iriCyan transition">Twitch</a>
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-widest text-iriLavender mb-2">Email Address</label>
+                        <input type="email" name="email" placeholder="promoter@venue.com" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-iriLavender transition font-light text-sm">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-widest text-iriPink mb-2">Event Date</label>
+                        <input type="date" name="event_date" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-iriPink transition font-light text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-widest text-iriPink mb-2">Location / Venue</label>
+                        <input type="text" name="location" placeholder="City, Venue Name" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-iriPink transition font-light text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-widest text-iriPink mb-2">Set Duration</label>
+                        <input type="text" name="set_duration" placeholder="e.g. 2 Hours Peak Time" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-iriPink transition font-light text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-mono uppercase tracking-widest text-iriLavender mb-2">Event Specs &amp; Details</label>
+                    <textarea name="event_details" rows="4" placeholder="Stage setup, line-up context, sound details..." class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-iriLavender transition font-light text-sm"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-gradient-to-r from-iriLavender via-iriPink to-iriCyan text-slate-950 font-semibold uppercase tracking-[0.2em] py-4 rounded-xl transition hover:opacity-95 shadow-iri-glow text-xs">
+                    Send Booking Inquiry
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-900 bg-iriDark/90 py-10 text-center text-xs text-slate-500 font-mono">
+        <div class="max-w-6xl mx-auto px-6 space-y-4">
+            <div class="flex justify-center gap-8 text-slate-400 font-light tracking-widest uppercase">
+                <a href="https://youtube.com/@djgabsync" target="_blank" rel="noopener noreferrer" class="hover:text-iriLavender transition">YouTube</a>
+                <a href="https://soundcloud.com/apocalypticchick" target="_blank" rel="noopener noreferrer" class="hover:text-iriLavender transition">SoundCloud</a>
+                <a href="https://www.instagram.com/apocalyptic_chick/" target="_blank" rel="noopener noreferrer" class="hover:text-iriPink transition">Instagram</a>
+                <a href="https://www.twitch.tv/djgabsync" target="_blank" rel="noopener noreferrer" class="hover:text-iriCyan transition">Twitch</a>
+            </div>
+
+            <p>&copy; 2026 GΔBSYNC. All rights reserved.</p>
         </div>
-
-        <p>&copy; 2026 GΔBSYNC. All rights reserved.</p>
-    </div>
-</footer>
-```
+    </footer>
 
 </body>
 </html>
-
-
