@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About &amp; EPK | GΔBSYNC // APOCALYPTIC CHICK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        iriLavender: '#a5b4fc',
+                        iriPink: '#f472b6',
+                        iriCyan: '#38bdf8',
+                        acidGreen: '#22c55e',
+                        bloodRed: '#ef4444',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #080c14;
+            background-image:
+                radial-gradient(ellipse at 20% 20%, rgba(165, 180, 252, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(34, 197, 94, 0.12) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-light tracking-[0.2em] text-iriLavender uppercase flex items-center gap-1">
+                <span>G</span>
+                <svg class="h-[0.72em] w-auto fill-none stroke-current stroke-[2.5] inline-block align-baseline" viewBox="0 0 24 24">
+                    <polygon points="12,3 2,21 22,21" />
+                </svg>
+                <span>BSYNC // APOCALYPTIC CHICK</span>
+            </a>
+
+            <nav class="flex items-center space-x-6 text-xs font-mono tracking-widest uppercase">
+                <a href="index.html" class="hover:text-iriLavender transition">Home</a>
+                <a href="about.html" class="text-iriPink border-b border-iriPink pb-1">About &amp; EPK</a>
+                <a href="index.html#booking" class="bg-gradient-to-r from-iriLavender via-iriPink to-iriCyan text-slate-950 font-semibold px-4 py-2 rounded-full text-xs transition">Book Artist</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-16 space-y-16">
+
+        <!-- Press Hero Section -->
+        <section class="grid md:grid-cols-12 gap-12 items-center">
+            
+            <!-- Press Photo Container -->
+            <div class="md:col-span-5 aspect-[4/5] w-full max-w-md mx-auto bg-slate-950/80 rounded-3xl glass-card overflow-hidden shadow-2xl">
+                <img
+                    src="48C9B7ED-6665-44B4-B417-4BB744519C28.png"
+                    alt="GΔBSYNC / Apocalyptic Chick Press Image"
+                    class="w-full h-full object-cover object-top rounded-3xl hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- Artist Overview -->
+            <div class="md:col-span-7 space-y-6">
+                <div class="inline-block px-3 py-1 rounded-full bg-iriLavender/10 text-iriLavender border border-iriLavender/30 font-mono text-xs tracking-widest uppercase">
+                    Electronic Press Kit (EPK)
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-light text-white tracking-widest uppercase leading-tight">
+                    Dual Persona, Singular Sound Vision
+                </h1>
+
+                <p class="text-slate-300 leading-relaxed font-extralight text-lg">
+                    Operating under two distinct creative aliases, the artist delivers tailored musical experiences ranging from melodic daytime festival grooves to high-octane late-night warehouse techno.
+                </p>
+
+                <!-- Assets Download Box -->
+                <div class="glass-card rounded-2xl p-6 space-y-4">
+                    <h3 class="text-xs font-mono uppercase tracking-widest text-iriPink">Promoter Press Downloads</h3>
+                    <div class="flex flex-wrap gap-4 text-xs font-mono">
+                        <a href="#" class="bg-slate-900 border border-white/20 hover:border-iriLavender px-4 py-2.5 rounded-xl transition flex items-center gap-2">
+                            <span>📄 High-Res Press Photos (.ZIP)</span>
+                        </a>
+                        <a href="#" class="bg-slate-900 border border-white/20 hover:border-acidGreen px-4 py-2.5 rounded-xl transition flex items-center gap-2">
+                            <span>⚡ Tech Rider &amp; Hospitality (.PDF)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Persona Breakdown Cards -->
+        <section class="grid md:grid-cols-2 gap-8">
+            
+            <!-- Gabsync Card -->
+            <div class="glass-card rounded-3xl p-8 space-y-4 border-l-4 border-l-iriLavender">
+                <div class="text-xs font-mono text-iriLavender tracking-widest uppercase">Daytime Persona // House</div>
+                <h2 class="text-3xl font-light text-white tracking-widest uppercase">GΔBSYNC</h2>
+                <p class="text-slate-300 font-extralight leading-relaxed text-sm">
+                    GΔBSYNC represents the lighter spectrum of house, Afro house, and melodic techno. Built for sunset sessions, main stages, outdoor pool parties, and lounge vibes.
+                </p>
+                <ul class="text-xs font-mono text-slate-400 space-y-2 pt-2">
+                    <li>• <strong class="text-slate-200">Key Subgenres:</strong> House, Afro House, Melodic Techno</li>
+                    <li>• <strong class="text-slate-200">Ideal Slots:</strong> Sunset sets, Main Stage openers, Daytime festivals</li>
+                </ul>
+            </div>
+
+            <!-- Apocalyptic Chick Card -->
+            <div class="glass-card rounded-3xl p-8 space-y-4 border-l-4 border-l-acidGreen">
+                <div class="text-xs font-mono text-acidGreen tracking-widest uppercase">Nighttime Persona // Techno</div>
+                <h2 class="text-3xl font-light text-white tracking-widest uppercase">Apocalyptic Chick</h2>
+                <p class="text-slate-300 font-extralight leading-relaxed text-sm">
+                    Apocalyptic Chick dives into dark industrial energy, minimal techno, driving basslines, and immersive visuals designed for late-night clubs and warehouse raves.
+                </p>
+                <ul class="text-xs font-mono text-slate-400 space-y-2 pt-2">
+                    <li>• <strong class="text-slate-200">Key Subgenres:</strong> Minimal Techno, Industrial Techno, Peak-Time</li>
+                    <li>• <strong class="text-slate-200">Ideal Slots:</strong> Late-night peak hours (2 AM+), Club rooms, Raves</li>
+                </ul>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Social Links Footer -->
+    <footer class="border-t border-slate-900 bg-slate-950/90 py-10 text-center text-xs text-slate-500 font-mono">
+        <div class="max-w-6xl mx-auto px-6 space-y-4">
+            <div class="flex justify-center gap-8 text-slate-400 font-light tracking-widest uppercase">
+                <a href="https://youtube.com/@djgabsync" target="_blank" rel="noopener noreferrer" class="hover:text-iriLavender transition">YouTube</a>
+                <a href="https://soundcloud.com/apocalypticchick" target="_blank" rel="noopener noreferrer" class="hover:text-iriPink transition">SoundCloud</a>
+                <a href="https://www.instagram.com/apocalyptic_chick/" target="_blank" rel="noopener noreferrer" class="hover:text-iriPink transition">Instagram</a>
+                <a href="https://www.twitch.tv/djgabsync" target="_blank" rel="noopener noreferrer" class="hover:text-iriCyan transition">Twitch</a>
+            </div>
+            <p>&copy; 2026 GΔBSYNC // APOCALYPTIC CHICK. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
