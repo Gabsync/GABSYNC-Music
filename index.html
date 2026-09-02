@@ -10,11 +10,14 @@
             theme: {
                 extend: {
                     colors: {
+                        // GΔBSYNC Colors
                         iriLavender: '#a5b4fc',
                         iriPink: '#f472b6',
                         iriCyan: '#38bdf8',
-                        acidGreen: '#22c55e',
-                        bloodRed: '#ef4444',
+                        // Apocalyptic Chick Colors (Electric Green & Royal Purple)
+                        toxicGreen: '#22c55e',
+                        royalPurple: '#a855f7',
+                        deepPurple: '#581c87'
                     }
                 }
             }
@@ -23,6 +26,7 @@
     <style>
         body { transition: background 0.6s ease, color 0.6s ease; }
 
+        /* GΔBSYNC Theme (Day / House) */
         .mode-day body {
             background-color: #080c14;
             background-image:
@@ -38,16 +42,18 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* APOCALYPTIC CHICK Theme (Night / Techno) */
         .mode-night body {
-            background-color: #030712;
+            background-color: #05020a;
             background-image:
-                radial-gradient(ellipse at 50% 20%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(239, 68, 68, 0.12) 0%, transparent 50%);
+                radial-gradient(ellipse at 30% 20%, rgba(168, 85, 247, 0.22) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(34, 197, 94, 0.18) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(88, 28, 135, 0.25) 0%, transparent 70%);
             background-attachment: fixed;
         }
 
         .mode-night .text-persona-title {
-            background: linear-gradient(135deg, #22c55e 0%, #ef4444 100%);
+            background: linear-gradient(135deg, #22c55e 0%, #a855f7 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -62,7 +68,6 @@
 </head>
 <body class="text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- Header / Navigation -->
     <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-white/10 transition-colors duration-500">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
@@ -74,7 +79,6 @@
                 <span>BSYNC</span>
             </a>
 
-            <!-- Mode Switcher -->
             <div class="flex items-center gap-3 bg-slate-900/90 p-1.5 rounded-full border border-white/15 shadow-inner">
                 <button id="btn-day" onclick="setPersona('day')" class="flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono tracking-widest uppercase transition-all duration-300 bg-iriLavender text-slate-950 font-bold shadow-md">
                     <span>☀️ GΔBSYNC</span>
@@ -91,9 +95,8 @@
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 space-y-24 py-12">
+    <main class="max-w-6xl mx-auto px-6 space-y-24 py-12 w-full">
 
-        <!-- Hero Section -->
         <section class="text-center py-12 space-y-6 relative">
             <div id="hero-tag" class="inline-block px-4 py-1.5 rounded-full border border-iriLavender/30 bg-iriLavender/10 text-iriLavender text-xs tracking-[0.2em] uppercase font-mono transition-all duration-500">
                 DAYTIME MODE // HOUSE &amp; AFRO HOUSE
@@ -115,8 +118,7 @@
             </div>
         </section>
 
-        <!-- Video Section -->
-        <section id="video" class="space-y-6">
+        <section id="video" class="space-y-6 max-w-4xl mx-auto w-full">
             <div class="flex items-center justify-between gap-4">
                 <h2 id="video-heading" class="text-2xl font-light tracking-[0.2em] uppercase text-slate-200 transition-all duration-500">
                     Featured House Mix
@@ -132,42 +134,74 @@
             </div>
         </section>
 
-        <!-- Booking Form Section -->
-        <section id="booking" class="space-y-6">
+        <section id="booking" class="space-y-6 max-w-3xl mx-auto w-full">
             <div class="text-center space-y-2">
-                <h2 class="text-3xl font-light text-white tracking-widest uppercase">Booking Inquiries</h2>
-                <p class="text-slate-400 text-xs font-mono tracking-wide">Select which persona you want to book for your venue or event.</p>
+                <h2 class="text-3xl font-light text-white tracking-widest uppercase">Booking &amp; Performance Inquiries</h2>
+                <p class="text-slate-400 text-xs font-mono tracking-wide">Submit your event details below to check availability and rates.</p>
             </div>
 
-            <form action="https://formsubmit.co/inyourcity.studio@gmail.com" method="POST" class="glass-card rounded-3xl p-8 space-y-6 max-w-2xl mx-auto">
+            <form action="https://formsubmit.co/inyourcity.studio@gmail.com" method="POST" class="glass-card rounded-3xl p-8 space-y-6">
+                
                 <div>
-                    <label class="block text-xs font-mono uppercase tracking-widest text-slate-300 mb-2">Requested Persona / Style</label>
+                    <label class="block text-xs font-mono uppercase tracking-widest text-slate-300 mb-2">Requested Persona / Style *</label>
                     <select id="booking-persona-select" name="requested_persona" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none transition font-light text-sm">
                         <option value="GABSYNC (House / Daytime)">GΔBSYNC (House / Minimal / Sunset Sets)</option>
                         <option value="Apocalyptic Chick (Techno / Late Night)">Apocalyptic Chick (Techno / Industrial / Club Sets)</option>
+                        <option value="Both / Dual Set (House & Techno)">Dual Package (Both Personas / Festival Set)</option>
                     </select>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-xs font-mono uppercase tracking-widest text-slate-300 mb-2">Promoter / Venue</label>
-                        <input type="text" name="organization" placeholder="Venue or Event Name" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none transition text-sm" required>
+                        <label class="block text-xs font-mono uppercase tracking-widest text-slate-300 mb-2">Contact Name *</label>
+                        <input type="text" name="contact_name" placeholder="First & Last Name" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none transition text-sm" required>
                     </div>
                     <div>
-                        <label class="block text-xs font-mono uppercase tracking-widest text-slate-300 mb-2">Email Address</label>
-                        <input type="email" name="email" placeholder="promoter@venue.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none transition text-sm" required>
+                        <label class="block text-xs font-mono uppercase tracking-widest text-slate-300 mb-2">Promoter / Venue Name *</label>
+                        <input type="text" name="organization" placeholder="e.g. Club Name, Festival, Brand" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none transition text-sm" required>
                     </div>
                 </div>
 
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-widest text-slate-300 mb-2">Email Address *</label>
+                        <input type="email" name="email" placeholder="promoter@venue.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none transition text-sm" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-widest text-slate-300 mb-2">Phone Number</label>
+                        <input type="tel" name="phone" placeholder="+1 (555) 000-0000" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none transition text-sm">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-widest text-slate-300 mb-2">Event Date *</label>
+                        <input type="date" name="event_date" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none transition text-sm" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-widest text-slate-300 mb-2">Performance Time &amp; Set Length *</label>
+                        <input type="text" name="set_time_and_length" placeholder="e.g. 1:00 AM - 3:00 AM (2 Hr Set)" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none transition text-sm" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-mono uppercase tracking-widest text-slate-300 mb-2">Event City &amp; Country *</label>
+                    <input type="text" name="event_location" placeholder="e.g. Los Angeles, CA or Berlin, Germany" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none transition text-sm" required>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-mono uppercase tracking-widest text-slate-300 mb-2">Additional Event Details / Equipment Provided</label>
+                    <textarea name="event_notes" rows="4" placeholder="Tell us about the venue capacity, sound system setup, budget, or stage schedule..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none transition text-sm"></textarea>
+                </div>
+
                 <button type="submit" id="submit-btn" class="w-full bg-gradient-to-r from-iriLavender via-iriPink to-iriCyan text-slate-950 font-semibold uppercase tracking-[0.2em] py-4 rounded-xl transition shadow-lg text-xs">
-                    Send Booking Request
+                    Send Detailed Booking Request
                 </button>
             </form>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="border-t border-slate-900 bg-slate-950/90 py-10 text-center text-xs text-slate-500 font-mono">
         <div class="max-w-6xl mx-auto px-6 space-y-4">
             <div class="flex justify-center gap-8 text-slate-400 font-light tracking-widest uppercase text-xs">
@@ -180,7 +214,6 @@
         </div>
     </footer>
 
-    <!-- Mode Switcher JS -->
     <script>
         const personas = {
             day: {
@@ -204,9 +237,9 @@
                 videoHeading: "Featured Techno Mix",
                 videoId: "-Y0K_vrLLRE",
                 btnDayClasses: "text-slate-400 hover:text-white",
-                btnNightClasses: "bg-acidGreen text-slate-950 font-bold shadow-md",
-                navBrandColor: "text-acidGreen",
-                navBtnBg: "bg-gradient-to-r from-acidGreen to-bloodRed text-slate-950",
+                btnNightClasses: "bg-toxicGreen text-slate-950 font-bold shadow-md",
+                navBrandColor: "text-toxicGreen",
+                navBtnBg: "bg-gradient-to-r from-toxicGreen via-royalPurple to-deepPurple text-slate-950",
                 formSelectIndex: 1
             }
         };
