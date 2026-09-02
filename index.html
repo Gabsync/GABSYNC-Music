@@ -4,36 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GΔBSYNC // APOCALYPTIC CHICK</title>
-
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        // Day Colors (GΔBSYNC)
                         iriLavender: '#a5b4fc',
                         iriPink: '#f472b6',
                         iriCyan: '#38bdf8',
-                        // Night Colors (Apocalyptic Chick)
                         acidGreen: '#22c55e',
                         bloodRed: '#ef4444',
-                        industrialDark: '#030712',
                     }
                 }
             }
         }
     </script>
-
     <style>
-        /* Base Background Transitions */
-        body {
-            transition: background 0.6s ease, color 0.6s ease;
-        }
+        body { transition: background 0.6s ease, color 0.6s ease; }
 
-        /* GΔBSYNC Theme (Day / House) */
         .mode-day body {
             background-color: #080c14;
             background-image:
@@ -49,7 +38,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* APOCALYPTIC CHICK Theme (Night / Techno) */
         .mode-night body {
             background-color: #030712;
             background-image:
@@ -64,7 +52,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Common Glassmorphic Elements */
         .glass-card {
             background: rgba(15, 23, 42, 0.65);
             backdrop-filter: blur(16px);
@@ -73,15 +60,13 @@
         }
     </style>
 </head>
-
 <body class="text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
     <!-- Header / Navigation -->
     <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-white/10 transition-colors duration-500">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-            <!-- Brand Logo -->
-            <a href="#" id="nav-brand" class="text-xl font-light tracking-[0.2em] text-iriLavender uppercase transition-colors duration-500 flex items-center gap-1">
+            <a href="index.html" id="nav-brand" class="text-xl font-light tracking-[0.2em] text-iriLavender uppercase transition-colors duration-500 flex items-center gap-1">
                 <span>G</span>
                 <svg class="h-[0.72em] w-auto fill-none stroke-current stroke-[2.5] inline-block align-baseline" viewBox="0 0 24 24">
                     <polygon points="12,3 2,21 22,21" />
@@ -89,7 +74,7 @@
                 <span>BSYNC</span>
             </a>
 
-            <!-- Persona Toggle Switch -->
+            <!-- Mode Switcher -->
             <div class="flex items-center gap-3 bg-slate-900/90 p-1.5 rounded-full border border-white/15 shadow-inner">
                 <button id="btn-day" onclick="setPersona('day')" class="flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono tracking-widest uppercase transition-all duration-300 bg-iriLavender text-slate-950 font-bold shadow-md">
                     <span>☀️ GΔBSYNC</span>
@@ -99,10 +84,10 @@
                 </button>
             </div>
 
-            <!-- Booking Shortcut Button -->
-            <a href="#booking" id="nav-booking-btn" class="bg-gradient-to-r from-iriLavender via-iriPink to-iriCyan text-slate-950 font-semibold px-5 py-2 rounded-full text-xs tracking-widest uppercase transition duration-300">
-                Book Artist
-            </a>
+            <nav class="hidden md:flex items-center gap-6 text-xs font-mono tracking-widest uppercase">
+                <a href="about.html" class="text-slate-300 hover:text-iriLavender transition">About &amp; EPK</a>
+                <a href="#booking" id="nav-booking-btn" class="bg-gradient-to-r from-iriLavender via-iriPink to-iriCyan text-slate-950 font-semibold px-5 py-2 rounded-full text-xs tracking-widest uppercase transition duration-300">Book Artist</a>
+            </nav>
         </div>
     </header>
 
@@ -110,13 +95,10 @@
 
         <!-- Hero Section -->
         <section class="text-center py-12 space-y-6 relative">
-            
-            <!-- Persona Tag -->
             <div id="hero-tag" class="inline-block px-4 py-1.5 rounded-full border border-iriLavender/30 bg-iriLavender/10 text-iriLavender text-xs tracking-[0.2em] uppercase font-mono transition-all duration-500">
                 DAYTIME MODE // HOUSE &amp; AFRO HOUSE
             </div>
 
-            <!-- Dynamic Headline -->
             <h1 id="hero-title" class="text-5xl md:text-8xl font-light tracking-[0.15em] uppercase leading-none text-persona-title py-2 transition-all duration-500">
                 GΔBSYNC
             </h1>
@@ -124,43 +106,37 @@
             <p id="hero-bio" class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-extralight tracking-wide leading-relaxed transition-all duration-500">
                 Lighter frequencies, sunset vibes, house music, and melodic soundscapes designed for festival main stages and daytime sets.
             </p>
+
+            <div class="pt-2">
+                <a href="about.html" class="inline-flex items-center gap-2 text-xs font-mono text-iriPink hover:text-iriLavender transition uppercase tracking-widest">
+                    <span>Read Full Bio &amp; View EPK Press Kit</span>
+                    <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
         </section>
 
-        <!-- Dynamic Featured Video Section -->
+        <!-- Video Section -->
         <section id="video" class="space-y-6">
             <div class="flex items-center justify-between gap-4">
                 <h2 id="video-heading" class="text-2xl font-light tracking-[0.2em] uppercase text-slate-200 transition-all duration-500">
                     Featured House Mix
                 </h2>
-
                 <a href="https://youtube.com/@djgabsync" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-iriPink hover:opacity-80 transition uppercase tracking-widest flex items-center gap-2">
                     <span>Visit YouTube</span>
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 </a>
             </div>
 
             <div class="aspect-video w-full rounded-3xl overflow-hidden glass-card shadow-2xl">
-                <iframe
-                    id="featured-video"
-                    class="w-full h-full"
-                    src="https://www.youtube.com/embed/rH055k3fago"
-                    title="Featured Mix"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
+                <iframe id="featured-video" class="w-full h-full" src="https://www.youtube.com/embed/rH055k3fago" title="Featured Mix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </section>
 
-        <!-- Dynamic Booking Form -->
+        <!-- Booking Form Section -->
         <section id="booking" class="space-y-6">
             <div class="text-center space-y-2">
                 <h2 class="text-3xl font-light text-white tracking-widest uppercase">Booking Inquiries</h2>
-                <p class="text-slate-400 text-xs font-mono tracking-wide">
-                    Select which persona you want to book for your venue or event.
-                </p>
+                <p class="text-slate-400 text-xs font-mono tracking-wide">Select which persona you want to book for your venue or event.</p>
             </div>
 
             <form action="https://formsubmit.co/inyourcity.studio@gmail.com" method="POST" class="glass-card rounded-3xl p-8 space-y-6 max-w-2xl mx-auto">
@@ -191,21 +167,20 @@
 
     </main>
 
-    <!-- Restored Social Links Footer -->
-    <footer class="border-t border-slate-900 bg-slate-950/90 py-10 text-center text-xs text-slate-500 font-mono transition-colors duration-500">
+    <!-- Footer -->
+    <footer class="border-t border-slate-900 bg-slate-950/90 py-10 text-center text-xs text-slate-500 font-mono">
         <div class="max-w-6xl mx-auto px-6 space-y-4">
             <div class="flex justify-center gap-8 text-slate-400 font-light tracking-widest uppercase text-xs">
-                <a href="https://youtube.com/@djgabsync" target="_blank" rel="noopener noreferrer" class="footer-link hover:text-iriLavender transition">YouTube</a>
-                <a href="https://soundcloud.com/apocalypticchick" target="_blank" rel="noopener noreferrer" class="footer-link hover:text-iriPink transition">SoundCloud</a>
-                <a href="https://www.instagram.com/apocalyptic_chick/" target="_blank" rel="noopener noreferrer" class="footer-link hover:text-iriPink transition">Instagram</a>
-                <a href="https://www.twitch.tv/djgabsync" target="_blank" rel="noopener noreferrer" class="footer-link hover:text-iriCyan transition">Twitch</a>
+                <a href="https://youtube.com/@djgabsync" target="_blank" rel="noopener noreferrer" class="hover:text-iriLavender transition">YouTube</a>
+                <a href="https://soundcloud.com/apocalypticchick" target="_blank" rel="noopener noreferrer" class="hover:text-iriPink transition">SoundCloud</a>
+                <a href="https://www.instagram.com/apocalyptic_chick/" target="_blank" rel="noopener noreferrer" class="hover:text-iriPink transition">Instagram</a>
+                <a href="https://www.twitch.tv/djgabsync" target="_blank" rel="noopener noreferrer" class="hover:text-iriCyan transition">Twitch</a>
             </div>
-
-            <p id="footer-copy" class="text-slate-600">&copy; 2026 GΔBSYNC // APOCALYPTIC CHICK. All rights reserved.</p>
+            <p>&copy; 2026 GΔBSYNC // APOCALYPTIC CHICK. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- State Switcher JavaScript -->
+    <!-- Mode Switcher JS -->
     <script>
         const personas = {
             day: {
@@ -214,7 +189,7 @@
                 title: "GΔBSYNC",
                 bio: "Lighter frequencies, sunset vibes, house music, and melodic soundscapes designed for festival main stages and daytime sets.",
                 videoHeading: "Featured House Mix",
-                videoId: "rH055k3fago", // Gabsync House set
+                videoId: "rH055k3fago",
                 btnDayClasses: "bg-iriLavender text-slate-950 font-bold shadow-md",
                 btnNightClasses: "text-slate-400 hover:text-white",
                 navBrandColor: "text-iriLavender",
@@ -227,7 +202,7 @@
                 title: "APOCALYPTIC CHICK",
                 bio: "Dark industrial energy, peak-time minimal techno, driving basslines, and immersive dark-room sets.",
                 videoHeading: "Featured Techno Mix",
-                videoId: "-Y0K_vrLLRE", // Apocalyptic Chick Techno playlist/set
+                videoId: "-Y0K_vrLLRE",
                 btnDayClasses: "text-slate-400 hover:text-white",
                 btnNightClasses: "bg-acidGreen text-slate-950 font-bold shadow-md",
                 navBrandColor: "text-acidGreen",
@@ -240,7 +215,6 @@
             const html = document.getElementById('main-html');
             const data = personas[mode];
 
-            // 1. Toggle root class for CSS gradients
             if (mode === 'day') {
                 html.classList.add('mode-day');
                 html.classList.remove('mode-night');
@@ -249,7 +223,6 @@
                 html.classList.remove('mode-day');
             }
 
-            // 2. Update UI Text
             document.getElementById('nav-brand').innerHTML = mode === 'day' 
                 ? '<span>G</span><svg class="h-[0.72em] w-auto fill-none stroke-current stroke-[2.5] inline-block align-baseline" viewBox="0 0 24 24"><polygon points="12,3 2,21 22,21" /></svg><span>BSYNC</span>'
                 : '<span>APOCALYPTIC CHICK</span>';
@@ -258,23 +231,17 @@
             document.getElementById('hero-title').innerText = data.title;
             document.getElementById('hero-bio').innerText = data.bio;
             document.getElementById('video-heading').innerText = data.videoHeading;
-
-            // 3. Update Video Player Embed
             document.getElementById('featured-video').src = `https://www.youtube.com/embed/${data.videoId}`;
 
-            // 4. Update Toggle Buttons Styling
             document.getElementById('btn-day').className = `flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono tracking-widest uppercase transition-all duration-300 ${data.btnDayClasses}`;
             document.getElementById('btn-night').className = `flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono tracking-widest uppercase transition-all duration-300 ${data.btnNightClasses}`;
 
-            // 5. Update Navbar & Form Highlights
             document.getElementById('nav-brand').className = `text-xl font-light tracking-[0.2em] uppercase transition-colors duration-500 ${data.navBrandColor}`;
             document.getElementById('nav-booking-btn').className = `${data.navBtnBg} font-semibold px-5 py-2 rounded-full text-xs tracking-widest uppercase transition duration-300`;
             document.getElementById('submit-btn').className = `w-full ${data.navBtnBg} font-semibold uppercase tracking-[0.2em] py-4 rounded-xl transition shadow-lg text-xs`;
 
-            // 6. Auto-select in form
             document.getElementById('booking-persona-select').selectedIndex = data.formSelectIndex;
         }
     </script>
-
 </body>
 </html>
