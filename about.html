@@ -13,8 +13,9 @@
                         iriLavender: '#a5b4fc',
                         iriPink: '#f472b6',
                         iriCyan: '#38bdf8',
-                        acidGreen: '#22c55e',
-                        bloodRed: '#ef4444',
+                        toxicGreen: '#22c55e',
+                        royalPurple: '#a855f7',
+                        deepPurple: '#581c87'
                     }
                 }
             }
@@ -22,10 +23,11 @@
     </script>
     <style>
         body {
-            background-color: #080c14;
+            background-color: #05020a;
             background-image:
                 radial-gradient(ellipse at 20% 20%, rgba(165, 180, 252, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(34, 197, 94, 0.12) 0%, transparent 50%);
+                radial-gradient(ellipse at 80% 80%, rgba(168, 85, 247, 0.18) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(34, 197, 94, 0.12) 0%, transparent 60%);
             background-attachment: fixed;
         }
         .glass-card {
@@ -37,7 +39,6 @@
 </head>
 <body class="text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- Header -->
     <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-white/10">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-xl font-light tracking-[0.2em] text-iriLavender uppercase flex items-center gap-1">
@@ -58,10 +59,8 @@
 
     <main class="max-w-6xl mx-auto px-6 py-16 space-y-16">
 
-        <!-- Press Hero Section -->
         <section class="grid md:grid-cols-12 gap-12 items-center">
             
-            <!-- Press Photo Container -->
             <div class="md:col-span-5 aspect-[4/5] w-full max-w-md mx-auto bg-slate-950/80 rounded-3xl glass-card overflow-hidden shadow-2xl">
                 <img
                     src="48C9B7ED-6665-44B4-B417-4BB744519C28.png"
@@ -69,7 +68,6 @@
                     class="w-full h-full object-cover object-top rounded-3xl hover:scale-105 transition duration-500">
             </div>
 
-            <!-- Artist Overview -->
             <div class="md:col-span-7 space-y-6">
                 <div class="inline-block px-3 py-1 rounded-full bg-iriLavender/10 text-iriLavender border border-iriLavender/30 font-mono text-xs tracking-widest uppercase">
                     Electronic Press Kit (EPK)
@@ -83,25 +81,22 @@
                     Operating under two distinct creative aliases, the artist delivers tailored musical experiences ranging from melodic daytime festival grooves to high-octane late-night warehouse techno.
                 </p>
 
-                <!-- Assets Download Box -->
                 <div class="glass-card rounded-2xl p-6 space-y-4">
                     <h3 class="text-xs font-mono uppercase tracking-widest text-iriPink">Promoter Press Downloads</h3>
                     <div class="flex flex-wrap gap-4 text-xs font-mono">
                         <a href="#" class="bg-slate-900 border border-white/20 hover:border-iriLavender px-4 py-2.5 rounded-xl transition flex items-center gap-2">
                             <span>📄 High-Res Press Photos (.ZIP)</span>
                         </a>
-                        <a href="#" class="bg-slate-900 border border-white/20 hover:border-acidGreen px-4 py-2.5 rounded-xl transition flex items-center gap-2">
-                            <span>⚡ Tech Rider &amp; Hospitality (.PDF)</span>
+                        <a href="#" class="bg-slate-900 border border-white/20 hover:border-toxicGreen px-4 py-2.5 rounded-xl transition flex items-center gap-2">
+                            <span>⚡ DJ Tech Rider &amp; Hospitality (.ZIP)</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Persona Breakdown Cards -->
         <section class="grid md:grid-cols-2 gap-8">
             
-            <!-- Gabsync Card -->
             <div class="glass-card rounded-3xl p-8 space-y-4 border-l-4 border-l-iriLavender">
                 <div class="text-xs font-mono text-iriLavender tracking-widest uppercase">Daytime Persona // House</div>
                 <h2 class="text-3xl font-light text-white tracking-widest uppercase">GΔBSYNC</h2>
@@ -114,15 +109,14 @@
                 </ul>
             </div>
 
-            <!-- Apocalyptic Chick Card -->
-            <div class="glass-card rounded-3xl p-8 space-y-4 border-l-4 border-l-acidGreen">
-                <div class="text-xs font-mono text-acidGreen tracking-widest uppercase">Nighttime Persona // Techno</div>
+            <div class="glass-card rounded-3xl p-8 space-y-4 border-l-4 border-l-toxicGreen bg-purple-950/20">
+                <div class="text-xs font-mono text-toxicGreen tracking-widest uppercase">Nighttime Persona // Techno</div>
                 <h2 class="text-3xl font-light text-white tracking-widest uppercase">Apocalyptic Chick</h2>
                 <p class="text-slate-300 font-extralight leading-relaxed text-sm">
-                    Apocalyptic Chick dives into dark industrial energy, minimal techno, driving basslines, and immersive visuals designed for late-night clubs and warehouse raves.
+                    Apocalyptic Chick dives into dark royal energy, minimal techno, driving basslines, and immersive dark-room visual sets.
                 </p>
                 <ul class="text-xs font-mono text-slate-400 space-y-2 pt-2">
-                    <li>• <strong class="text-slate-200">Key Subgenres:</strong> Minimal Techno, Industrial Techno, Peak-Time</li>
+                    <li>• <strong class="text-slate-200">Key Subgenres:</strong> Minimal Techno, Peak-Time, Industrial</li>
                     <li>• <strong class="text-slate-200">Ideal Slots:</strong> Late-night peak hours (2 AM+), Club rooms, Raves</li>
                 </ul>
             </div>
@@ -131,7 +125,6 @@
 
     </main>
 
-    <!-- Social Links Footer -->
     <footer class="border-t border-slate-900 bg-slate-950/90 py-10 text-center text-xs text-slate-500 font-mono">
         <div class="max-w-6xl mx-auto px-6 space-y-4">
             <div class="flex justify-center gap-8 text-slate-400 font-light tracking-widest uppercase">
